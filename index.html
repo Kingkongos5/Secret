@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <link rel="stylesheet" href="style.css">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+   <title>Private Access Only 🔒</title>
+   <!--  data-start='transition-delay in seconds'
+         data-anim='transition-delay in seconds' animation of the element when visible
+   -->
+</head>
+
+<body>
+   <div class="bg-glow glow-1"></div>
+   <div class="bg-glow glow-2"></div>
+
+   <!-- Основна картка -->
+   <div class="card" id="mainCard">
+      <!-- Крок 1 -->
+      <div id="step1" class="step active">
+         <div class="icon-wrapper">🔒</div>
+         <h1>Сільгосп контроль</h1>
+         <p>Цей сайт доступний тільки для однієї конкретної скаженої селючки, яка може і пальця в дупу всунуть, і
+            пікміхой за секунду стати</p>
+         <button class="btn btn-pulse" onclick="nextStep(2)">Підтвердити особу 😉</button>
+      </div>
+
+      <!-- Крок 2 -->
+      <div id="step2" class="step">
+         <div class="icon-wrapper">✨</div>
+         <h1>З тобою захоплює по-справжньому</h1>
+         <p style="font-size: 0.85rem; color: #a99cb0; margin-bottom: 14px;">Деякі речі в моїй голові записані назавжди:
+         </p>
+
+         <div class="memory-box" data-start="0.30">
+            <div class="memory-title">07:00 ранку</div>
+            <div class="memory-text">Коли ти вирубилася з телефоном, чекаючи моє повідомлення. Той ранок коштував усіх
+               безсонних ночей. Я його завжди пам'ятав і часто згадував</div>
+         </div>
+
+         <div class="memory-box" data-start="0.45">
+            <div class="memory-title">Вечір, коли все почалося</div>
+            <div class="memory-text">Ти вискочила на пару хвилин — домашня, затишна й п'яненька. Ті дві години на
+               лавочці в обнімку пролетіли як мить, і я вже тоді зрозумів, що ти надовго в моїй голові</div>
+         </div>
+
+         <div class="memory-box" data-start="0.60">
+            <div class="memory-title">Мемчики)</div>
+            <div class="memory-text">І звісно наше легендарне ДЕ ДЕ ДЕ від якого ми оба всикалися тай всикаємся досихпір
+            </div>
+         </div>
+
+         <button class="btn btn-pulse" style="margin-top: 10px;" onclick="nextStep(3)">Далі 🔥</button>
+      </div>
+
+      <!-- Крок 3 -->
+      <div id="step3" class="step">
+         <div class="icon-wrapper">😈</div>
+         <h1>Важливе запитання</h1>
+         <p>У мене досі все ниє через твої рухи в шортах. Ми наступного разу повторюємо?</p>
+
+         <div class="btn-group">
+            <button id="yesBtn" class="btn btn-pulse" onclick="sayYes()">Так, звісно ❤️</button>
+            <button id="noBtn" class="btn" onmouseover="dodgeBtn(event)" ontouchstart="dodgeBtn(event)"
+               onclick="dodgeBtn(event)">Нє</button>
+         </div>
+      </div>
+
+      <!-- Крок 4 -->
+      <div id="step4" class="step">
+         <div class="icon-wrapper">❤️‍🔥</div>
+         <h1>Правильний вибір</h1>
+         <p style="font-size: 1.05rem; color: #fff; line-height: 1.6;">
+            Ти ні бося ночіііі... ведь я рядом.<br><br>
+            Ти зводиш мене з розуму, красуня. Збирайся з думками — наступного разу я тебе так просто вже не відпущу
+         </p>
+
+         <!-- 10-секундний відлік замість статичного тексту -->
+         <div class="timer-container">
+            <span style="font-size: 0.8rem; color: #a99cb0; letter-spacing: 0.5px; text-transform: uppercase;">Не
+               закривай...</span>
+            <div class="timer-badge" id="timerDisplay">10</div>
+         </div>
+      </div>
+   </div>
+
+   <!-- Зона кінематографічного показу тексту -->
+   <div id="cinematicContainer">
+      <div id="cText1" class="cine-text">Ось, що я збирався зробити</div>
+      <div id="cText2" class="cine-text">Але потім я зупинився</div>
+      <div id="cText3" class="cine-text">Я хочу зробити щось <span class="word-highlight">особливе</span>.</div>
+      <div id="cText4" class="cine-text">Тому що...</div>
+      <div id="cText5" class="cine-text" style="flex-direction: column;
+   align-items: center; display: flex;
+   gap: 15px;">Ти - Особлива <span class="smile">:)</span></div>
+      <div id="cText6" class="cine-text huge-text">ДУЖЕ</div>
+      <div id="cText7" class="cine-text" style="font-size: 1.6rem; color: #ff5277; font-weight: 800;">
+         Я тебе кохаю, Киця ❤️
+         <div style="margin-top: 30px;">
+            <button class="btn btn-pulse" onclick="restartAll()" style="font-size: 0.9rem; padding: 12px 24px;">
+               Глянути все з початку 🔄
+            </button>
+         </div>
+      </div>
+   </div>
+   <script src="script.js"></script>
+</body>
+
+</html>
